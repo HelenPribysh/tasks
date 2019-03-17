@@ -6,12 +6,8 @@ namespace case3
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[3] { 1, 2, 3 };
-            Array.Reverse(arr);
-            foreach (int i in arr)
-                Console.WriteLine(i);
+            int[] arr = new int[4] { 1, 2, 3, 4 };
             MyReverse(arr);
-
         }
 
         public static void MyReverse(int[] array)

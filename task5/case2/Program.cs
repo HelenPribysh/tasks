@@ -7,6 +7,7 @@ namespace case2
         static void Main(string[] args)
         {
             int[] array = new int[5];
+            Console.WriteLine("Enter array numbers:");
             try
             {
                 for (int i = 0; i < array.Length - 1; i++)
@@ -24,14 +25,10 @@ namespace case2
                 return;
             }
 
-            foreach (int i in array)
-            {
-                Console.Write($"{i} ");
-            }
-            Console.WriteLine();
+            ArrayOutput(array);
 
             int number, index;
-
+            Console.WriteLine("Enter a number and a position in array");
             try
             {
                 number = int.Parse(Console.ReadLine());
@@ -57,10 +54,14 @@ namespace case2
                 array[i] = number;
                 number = element;
             }
+
+            ArrayOutput(array);
+        }
+
+        static void ArrayOutput(int[] array)
+        {
             foreach (int i in array)
-            {
                 Console.Write($"{i} ");
-            }
             Console.WriteLine();
         }
     }
