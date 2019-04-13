@@ -8,24 +8,21 @@ namespace task9
     {
         static void Main(string[] args)
         {
-            Song song = new Song("Umbrella", 4, "Rihanna", 2007, pop);            
+            Song song = new Song("Umbrella", 4, "Rihanna", 2007, pop);
             var data = GetSongData(song);
 
             Console.WriteLine(data);
-            JsonConvert.SerializeObject(data);
+            Console.WriteLine(JsonConvert.SerializeObject(data));
         }
 
         public static dynamic GetSongData(Song song)
         {
-            var data = new
+            return new
             {
                 Name = song.NameOfSong,
                 Lenth = song.LengthOfSong,
                 Year = song.DataOfRelease
             };
-
-            //Console.WriteLine($"{song.NameOfSong}, {song.LengthOfSong}, {song.DataOfRelease}");
-            return data;
         }
     }
 }
