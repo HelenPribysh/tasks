@@ -6,7 +6,9 @@ namespace task10
 {
     public abstract class Figure 
     {
-        public string Name { get => Name; set => Name = value; }
+        private string name;
+
+        public string Name { get => name; set => name = value; }
 
         internal abstract double GetSquare();
     }

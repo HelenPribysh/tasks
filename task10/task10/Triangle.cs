@@ -6,13 +6,15 @@ namespace task10
 {
     public class Triangle : Figure
     {
-        public int Side { get => Side; set => Side = value; }
+        private int side;
 
         public Triangle(int _side)
         {
             Side = _side;
             Name = GetType().ToString() + Side;
         }
+
+        public int Side { get => side; set => side = value; }
 
         override internal double GetSquare()
         {

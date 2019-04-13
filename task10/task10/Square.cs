@@ -6,13 +6,15 @@ namespace task10
 {
     public class Foursquare : Figure
     {
-        public int Side { get => Side; set => Side = value; }     
+        private int side;
 
         public Foursquare(int _side)
         {
             Side = _side;
             Name = GetType().ToString() + Side;
         }
+
+        public int Side { get => side; set => side = value; }
 
         override internal double GetSquare()
         {
